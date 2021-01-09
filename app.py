@@ -20,7 +20,7 @@ def bot():
             r = get_quote() 
             quote = f"{r['content']} - {r['author']}" 
         except Exception :
-            quote = "On ne peut pas trouver de citation pour le moment... Système indispo"
+            quote = "Je ne peut pas trouver de citation pour le moment..."
         resp_msg.body(quote)
         responded = True 
     
@@ -29,7 +29,7 @@ def bot():
         responded = True 
 
     if not responded :
-        resp_msg.body("Bot indiponible pour le moment...") 
+        resp_msg.body("Le bot ne comprend pas ça...") 
         
     return str(resp)
 
